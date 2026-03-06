@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-3m*6u=gq3$6-asxaded*m$po2l3lj7m=bjuicwnei$-zewferg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['law-firm-system.onrender.com']
 
 
 # Application definition
@@ -124,4 +124,5 @@ import os
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
