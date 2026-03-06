@@ -1,0 +1,15 @@
+<h3>Upcoming Court Dates (Next 7 Days)</h3>
+
+{% if summary.upcoming_courts %}
+    <ul>
+        {% for court in summary.upcoming_courts %}
+            <li>
+                {{ court.hearing_date }} -
+                {{ court.matter.matter_number }} -
+                {{ court.court_name }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No upcoming court dates.</p>
+{% endif %}

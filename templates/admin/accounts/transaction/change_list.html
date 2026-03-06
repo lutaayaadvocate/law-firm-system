@@ -1,0 +1,21 @@
+{% extends "admin/change_list.html" %}
+
+{% block content %}
+
+{{ block.super }}
+
+{% if summary %}
+<div style="margin-top:30px; padding:20px; background:#f8f8f8; border-radius:8px;">
+
+<h3>Accounts Summary</h3>
+
+<p><strong>Total Income:</strong> UGX {{ summary.total_income }}</p>
+
+<p><strong>Total Expense:</strong> UGX {{ summary.total_expense }}</p>
+
+<p><strong>Profit:</strong> UGX {{ summary.profit }}</p>
+
+</div>
+{% endif %}
+
+{% endblock %}

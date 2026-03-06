@@ -1,0 +1,32 @@
+<h1>Accounts Dashboard</h1>
+
+<h2>Financial Summary</h2>
+
+<p><strong>Total Income:</strong> UGX {{ total_income }}</p>
+<p><strong>Total Expenses:</strong> UGX {{ total_expense }}</p>
+<p><strong>Balance:</strong> UGX {{ balance }}</p>
+
+<hr>
+
+<h2>This Month's Transactions</h2>
+
+<table border="1">
+<tr>
+<th>Client</th>
+<th>Description</th>
+<th>Amount</th>
+<th>Type</th>
+<th>Date</th>
+</tr>
+
+{% for t in monthly_transactions %}
+<tr>
+<td>{{ t.client_name }}</td>
+<td>{{ t.description }}</td>
+<td>UGX {{ t.amount }}</td>
+<td>{{ t.transaction_type }}</td>
+<td>{{ t.date }}</td>
+</tr>
+{% endfor %}
+
+</table>
